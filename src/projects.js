@@ -1,6 +1,6 @@
 import React from "react";
 
-const Project = [
+const projects = [
     {
         title: "Stock Bot",
         description: "Build a trading bot using Alpaca API. You can download a docker container from the link",
@@ -22,7 +22,7 @@ export default function Projects() {
         <div style={{ padding: "2rem"}}>
             <h2>My Projects</h2>
             <div style={{display: "grid", gap: "1.5rem", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))"}}>
-                {Projects.map((project, index) => {
+                {projects.map((project, index) => {
                     <div
                     key={index}
                     style={{
