@@ -18,26 +18,27 @@ const projects = [
     }
 ];
 export default function Projects() {
-    return(
-        <div style={{ padding: "2rem"}}>
+    return (
+        <div style={{ padding: "2rem" }}>
             <h2>My Projects</h2>
-            <div style={{display: "grid", gap: "1.5rem", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))"}}>
-                {projects.map((project, index) => {
+            <div style={{ display: "grid", gap: "1.5rem", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))" }}>
+                {projects.map((project, index) => (
                     <div
-                    key={index}
-                    style={{
-                        padding: "1rem",
-                        border: "1px solid #ddd",
-                        borderRadius: "10px",
-                        boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
-                    }}>
+                        key={index}
+                        style={{
+                            padding: "1rem",
+                            border: "1px solid #ddd",
+                            borderRadius: "10px",
+                            boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
+                        }}
+                    >
                         <h3>{project.title}</h3>
                         <p>{project.description}</p>
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
                             🔗 View on GitHub
                         </a>
                     </div>
-                })}
+                ))}
             </div>
         </div>
     );
