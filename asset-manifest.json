@@ -1,16 +1,17 @@
 {
   "files": {
     "main.css": "/web-portfolio/static/css/main.b829ddb2.css",
-    "main.js": "/web-portfolio/static/js/main.79af277e.js",
+    "main.js": "/web-portfolio/static/js/main.8d7620d3.js",
     "static/js/453.67a06390.chunk.js": "/web-portfolio/static/js/453.67a06390.chunk.js",
+    "static/media/scrumAssistant.png": "/web-portfolio/static/media/scrumAssistant.6b37b4647c20e4e71b12.png",
     "static/media/logo.svg": "/web-portfolio/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/web-portfolio/index.html",
     "main.b829ddb2.css.map": "/web-portfolio/static/css/main.b829ddb2.css.map",
-    "main.79af277e.js.map": "/web-portfolio/static/js/main.79af277e.js.map",
+    "main.8d7620d3.js.map": "/web-portfolio/static/js/main.8d7620d3.js.map",
     "453.67a06390.chunk.js.map": "/web-portfolio/static/js/453.67a06390.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b829ddb2.css",
-    "static/js/main.79af277e.js"
+    "static/js/main.8d7620d3.js"
   ]
 }
