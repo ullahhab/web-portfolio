@@ -11,7 +11,7 @@ const projects = [
         description:
             "Build a trading bot using Alpaca API. You can download a docker container from the link",
         link: "https://github.com/ullahhab",
-        images: [stockai] 
+        images: [stockai]
     },
     {
         title: "Recipe Manager",
@@ -32,6 +32,7 @@ function ProjectCard({ project }) {
     const [hovered, setHovered] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [progress, setProgress] = useState(0);
+    const hasMultipleImages = project.images && project.images.length > 1;
 
     useEffect(() => {
         let imgInterval;
@@ -57,7 +58,7 @@ function ProjectCard({ project }) {
             clearInterval(imgInterval);
             clearInterval(progressInterval);
         };
-    }, [hovered, project.images.length]);
+    }, [hovered, hasMultipleImages, project.images?.length]);
 
     return (
         <div
@@ -92,47 +93,49 @@ function ProjectCard({ project }) {
                         />
 
                         {/* Instagram-style progress bars */}
-                        <div
-                            style={{
-                                position: "absolute",
-                                top: "8px",
-                                left: "8px",
-                                right: "8px",
-                                display: "flex",
-                                gap: "4px"
-                            }}
-                        >
-                            {project.images.map((_, i) => (
-                                <div
-                                    key={i}
-                                    style={{
-                                        flex: 1,
-                                        height: "4px",
-                                        background: "rgba(255,255,255,0.4)",
-                                        borderRadius: "2px",
-                                        overflow: "hidden"
-                                    }}
-                                >
+                        {/* Only show loading bars if multiple images */}
+                        {hasMultipleImages && (
+                            <div
+                                style={{
+                                    position: "absolute",
+                                    top: "8px",
+                                    left: "8px",
+                                    right: "8px",
+                                    display: "flex",
+                                    gap: "4px"
+                                }}
+                            >
+                                {project.images.map((_, i) => (
                                     <div
+                                        key={i}
                                         style={{
-                                            height: "100%",
-                                            width:
-                                                i < currentIndex
-                                                    ? "100%" // filled if already passed
-                                                    : i === currentIndex
-                                                        ? `${progress}%` // active one animates
-                                                        : "0%",
-                                            background: "#007bff",
-                                            transition: "width 0.1s linear"
+                                            flex: 1,
+                                            height: "4px",
+                                            background: "rgba(255,255,255,0.4)",
+                                            borderRadius: "2px",
+                                            overflow: "hidden"
                                         }}
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                                    >
+                                        <div
+                                            style={{
+                                                height: "100%",
+                                                width:
+                                                    i < currentIndex
+                                                        ? "100%"
+                                                        : i === currentIndex
+                                                            ? `${progress}%`
+                                                            : "0%",
+                                                background: "#007bff",
+                                                transition: "width 0.1s linear"
+                                            }}
+                                        />
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </a>
             )}
-
             <a href={project.link} target="_blank" rel="noopener noreferrer">
                 🔗 View on GitHub
             </a>
