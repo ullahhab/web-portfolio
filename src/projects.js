@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import scrum1 from "./images/scrum1.png";
 import scrum2 from "./images/scrum2.png";
 import scrum3 from "./images/scrum3.png";
-import chefai1 from "./images/chefai1.png"
+import chefai1 from "./images/chefai1.png";
+import stockai from "./images/stockAiBot.png"
 
 const projects = [
     {
@@ -10,7 +11,7 @@ const projects = [
         description:
             "Build a trading bot using Alpaca API. You can download a docker container from the link",
         link: "https://github.com/ullahhab",
-        images: [scrum1, scrum2, scrum3] // 👈 multiple images
+        images: [stockai] 
     },
     {
         title: "Recipe Manager",
