@@ -21,9 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build:test": "PUBLIC_URL=/web-portfolio-test react-scripts build",
-    "predeploy:test": "npm run build:test",
-    "deploy:test": "gh-pages -d build -b gh-pages-test"
+    "localtest": "npm start"
 
   },
   "eslintConfig": {
