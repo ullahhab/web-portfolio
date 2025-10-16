@@ -7,7 +7,7 @@ export default function NetworthPage() {
   useEffect(() => {
     async function fetchNetworth() {
       try {
-        const res = await fetch("https://alpaca-project-d30e2ic1y-hammadullahris-1789s-projects.vercel.app/api/networth"); // works if frontend+backend are on same Vercel project
+        const res = await fetch("http://localhost:5000/api/networth"); // works if frontend+backend are on same Vercel project
         const data = await res.json();
         setEquity(data.equity);
       } catch (err) {
